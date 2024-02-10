@@ -10,7 +10,7 @@ func Set() {
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath("config")
 	if err := viper.ReadInConfig(); err != nil {
-		log.Fatal("Error reading config")
+		log.Fatal("Error reading config: ", err)
 	}
 
 	err := viper.Unmarshal(&configuration)

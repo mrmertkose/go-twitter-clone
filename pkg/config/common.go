@@ -1,5 +1,5 @@
 package config
 
-import config "twitterClone/configs"
+import config "twitterClone/config"
 
 var configuration config.Config
