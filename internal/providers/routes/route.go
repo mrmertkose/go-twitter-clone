@@ -2,10 +2,9 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
+	userRoutes "twitterClone/internal/modules/user/routes"
 )
 
 func RegisterRoutes(router *gin.Engine) {
-	//homeRoutes.Routes(router)
-	//articleRoutes.Routes(router)
-	//userRoutes.Routes(router)
+	userRoutes.Routes(router)
 }
