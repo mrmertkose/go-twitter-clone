@@ -1,0 +1,13 @@
+app:
+  name: "App"
+
+server:
+  host: "localhost"
+  port: "8080"
+
+db:
+  username: ""
+  password: ""
+  host: "127.0.0.1"
+  port: "3306"
+  name: ""
