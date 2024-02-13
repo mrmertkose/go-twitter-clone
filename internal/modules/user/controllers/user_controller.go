@@ -1,6 +1,11 @@
 package controllers
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+	"github.com/gin-gonic/gin"
+	"net/http"
+	"twitterClone/internal/modules/user/request"
+)
 
 type Controller struct {
 }
@@ -9,10 +14,17 @@ func New() *Controller {
 	return &Controller{}
 }
 
-func (c Controller) Login(context *gin.Context) {
-
+func (controller Controller) Login(c *gin.Context) {
+	var loginRequest request.LoginRequest
+	if err := c.ShouldBind(&loginRequest); err != nil {
+		c.JSON(http.StatusUnprocessableEntity, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+	fmt.Println(loginRequest)
 }
 
-func (c Controller) Register(context *gin.Context) {
+func (controller Controller) Register(context *gin.Context) {
 
 }

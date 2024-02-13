@@ -8,6 +8,6 @@ import (
 func Routes(router *gin.Engine) {
 	userController := controllers.New()
 
-	router.GET("/login", userController.Login)
-	router.GET("/register", userController.Register)
+	router.POST("/login", userController.Login)
+	router.POST("/register", userController.Register)
 }
